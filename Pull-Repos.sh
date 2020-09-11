@@ -70,4 +70,4 @@ git pull
 cd /home/pmoody/Documents/Powershell
 
 
-bash /home/pmoody/Documents/Bash/PressAnyKey.sh
+bash /home/pmoody/Documents/BashScripts/PressAnyKey.sh

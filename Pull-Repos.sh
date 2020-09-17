@@ -27,7 +27,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/Documents/scripts
+cd /home/pmoody/repositories/scripts
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -35,7 +35,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/Documents/tnhs-gocd-scripts
+cd /home/pmoody/repositories/tnhs-gocd-scripts
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -43,7 +43,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/Documents/Playbooks
+cd /home/pmoody/repositories/Playbooks
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)

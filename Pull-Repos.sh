@@ -4,10 +4,10 @@ orange=`tput setaf 3`
 reset=`tput sgr0`
 
 # Check that the script is being run with root access
-[ "$EUID" -eq 0 ] || {
-  echo 'Please run with sudo or as root.'
-  exit 1
-}
+#[ "$EUID" -eq 0 ] || {
+#  echo 'Please run with sudo or as root.'
+#  exit 1
+#}
 
 
 #Powershell_Private repo

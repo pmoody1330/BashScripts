@@ -4,14 +4,14 @@ orange=`tput setaf 3`
 reset=`tput sgr0`
 
 # Check that the script is being run with root access
-[ "$EUID" -eq 0 ] || {
-  echo 'Please run with sudo or as root.'
-  exit 1
-}
+#[ "$EUID" -eq 0 ] || {
+#  echo 'Please run with sudo or as root.'
+#  exit 1
+#}
 
 
 #Powershell_Private repo
-cd /home/pmoody/Documents/Powershell
+cd /home/pmoody/repositories/powershell_private
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -19,7 +19,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/Documents/SQL
+cd /home/pmoody/repositories/ramp_sql-scripts
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -27,7 +27,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/Documents/scripts
+cd /home/pmoody/repositories/scripts
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -35,7 +35,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/Documents/tnhs-gocd-scripts
+cd /home/pmoody/repositories/tnhs-gocd-scripts
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -43,7 +43,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/Documents/Playbooks
+cd /home/pmoody/repositories/Playbooks
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -59,7 +59,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/Documents/BashScripts
+cd /home/pmoody/repositories/BashScripts
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -67,7 +67,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull 
 
-cd /home/pmoody/Documents/Powershell
+cd /home/pmoody/repositories/powershell_private
 
 
-bash /home/pmoody/Documents/BashScripts/PressAnyKey.sh
+bash /home/pmoody/repositories/BashScripts/PressAnyKey.sh

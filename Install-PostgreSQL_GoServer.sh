@@ -8,11 +8,13 @@
 
 # install PostgreSQL
 apt update
-apt install postgresql postgresql-contrib -y
+apt install postgresql postgresql-contrib pgadmin3 -y
 service postgresql start
 systemctl enable postgresql
 
 sudo -i -u postgres
+
+psql
 
 # create the database
 CREATE ROLE "go" PASSWORD 'Password!' NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT LOGIN;

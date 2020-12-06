@@ -75,6 +75,14 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
+cd /home/pmoody/repositories/Python
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull
+
 cd /home/pmoody/repositories/powershell_private
 
 

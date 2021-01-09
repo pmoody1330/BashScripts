@@ -4,3 +4,4 @@ duplicatefind ()
 {
     find . ! -empty -type f -exec md5sum {} + | sort | uniq -w32 -dD 
 }
+# source ./duplicatefind.sh; duplicatefind

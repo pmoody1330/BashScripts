@@ -1,0 +1,1 @@
+FILES=$(ls -A); for FILE in $FILES; do sudo chown pmoody $FILE; done

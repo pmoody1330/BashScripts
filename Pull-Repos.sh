@@ -95,6 +95,22 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
+cd /home/pmoody/repositories/pmoodyDT/ansible
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull
+
+cd /home/pmoody/repositories/pmoodyDT/terraform
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull
+
 cd /home/pmoody/repositories/BashScripts
 
 

@@ -5,4 +5,13 @@ ssh-keygen -t rsa -b 4096 -C "test@test.com" -P $pw -f "/home/pmoody/.ssh/$KeyFi
 eval "$(ssh-agent -s)"
 ssh-add -K ~/.ssh/$KeyFile
 
+# See what key is being used
+ssh -v git@github.com
+
+# Check your saved keys
+ssh-add -l
+
+# Delete all saved keys
+ssh-add -D
+
 # https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent

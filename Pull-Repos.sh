@@ -3,6 +3,10 @@ magenta=`tput setaf 5`
 orange=`tput setaf 3`
 reset=`tput sgr0`
 
+# Kill any open ssh sessions so the correct key will be used
+PID=$(pgrep -f ssh); kill $PID
+PID=''
+
 # Check that the script is being run with root access
 #[ "$EUID" -eq 0 ] || {
 #  echo 'Please run with sudo or as root.'
@@ -95,15 +99,27 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
+# Kill any open ssh sessions so the correct key will be used
+PID=$(pgrep -f ssh); kill $PID
+PID=''
+
 cd /home/pmoody/repositories/pmoodyDT/ansible
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
 echo "${orange}$remote ${reset}"
 git status
-git pull
+#git pull
 
 cd /home/pmoody/repositories/pmoodyDT/terraform
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+#git pull
+
+cd /home/pmoody/repositories/pmoodyDT/Bash_DT
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -113,5 +129,8 @@ git pull
 
 cd /home/pmoody/repositories/BashScripts
 
+# Kill any open ssh sessions so the correct key will be used
+PID=$(pgrep -f ssh); kill $PID
+PID=''
 
 bash /home/pmoody/repositories/BashScripts/PressAnyKey.sh

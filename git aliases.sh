@@ -38,6 +38,10 @@ brname () {
   fi
 }
 
+# These will clean up files that are showing in git status but have been added to the .gitignore file
+# git update-index --assume-unchanged <file>
+#git rm --cached <file>
+
 # possible aliases
 #st = status --short -uno
 #ci = commit

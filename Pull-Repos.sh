@@ -109,7 +109,7 @@ echo "${magenta}$p"
 remote=$(git remote -v)
 echo "${orange}$remote ${reset}"
 git status
-#git pull
+git pull --all
 
 cd /home/pmoody/repositories/pmoodyDT/terraform
 p=$(pwd)
@@ -117,9 +117,17 @@ echo "${magenta}$p"
 remote=$(git remote -v)
 echo "${orange}$remote ${reset}"
 git status
-#git pull
+git pull --all
 
 cd /home/pmoody/repositories/pmoodyDT/Bash_DT
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull
+
+cd /home/pmoody/repositories/pmoodyDT/PythonDT
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)

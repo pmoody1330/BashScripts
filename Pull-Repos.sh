@@ -135,6 +135,30 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
+cd /home/pmoody/repositories/pmoodyDT/Notes
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull 
+
+cd /home/pmoody/repositories/pmoodyDT/LogicMonitor
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull 
+
+cd /home/pmoody/repositories/pmoodyDT/SQL 
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull 
+
 cd /home/pmoody/repositories/BashScripts
 
 # Kill any open ssh sessions so the correct key will be used

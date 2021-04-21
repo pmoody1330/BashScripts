@@ -1,3 +1,4 @@
+#!/bin/bash
 # git push as p 
 git config --global alias.p 'push'
 

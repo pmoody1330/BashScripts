@@ -1,3 +1,4 @@
+#!/bin/bash
 netstat -s # interface statistics
 netstat -a # display all connections
 netstat -at # TCP & UDP connections only

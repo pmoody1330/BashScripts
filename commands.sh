@@ -37,3 +37,6 @@ scp -r /local/directory/ pmoody@to_host:/remote/directory/
 
 # Copy file from remote host to remote host
 scp pmoody@from_host:/remote/directory/file.txt pmoody@to_host:/remote/directory/
+
+###  Chrome  ### 
+Chrome://restart

@@ -40,3 +40,11 @@ scp pmoody@from_host:/remote/directory/file.txt pmoody@to_host:/remote/directory
 
 ###  Chrome  ### 
 Chrome://restart
+
+###  SSH  ###
+# Use this is SSH isn't seeing a key that is installed
+ssh-add -l 
+
+# Use this to test the connection to github - it tells you the account that is being used
+ssh -T git@github.com
+

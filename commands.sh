@@ -48,3 +48,9 @@ ssh-add -l
 # Use this to test the connection to github - it tells you the account that is being used
 ssh -T git@github.com
 
+# These need to be installed
+tldr
+lazygit
+jq 
+how2 #stack overflow CLI
+# https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc

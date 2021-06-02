@@ -41,6 +41,10 @@ scp pmoody@from_host:/remote/directory/file.txt pmoody@to_host:/remote/directory
 ###  Chrome  ### 
 Chrome://restart
 
+###  NMAP ####
+# Check open ports on host
+nmap -sV 10.1.175.3
+
 ###  SSH  ###
 # Use this is SSH isn't seeing a key that is installed
 ssh-add -l 

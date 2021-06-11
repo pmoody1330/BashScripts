@@ -61,19 +61,19 @@ how2 #stack overflow CLI
 # https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc
 
 #SecTools
-nmap/masscan
-rumble (net scanner) #https://www.rumble.run
-GoBuster #dir/file brute force
-BurpSuite
-ffuf
-wpscan #Wordpress scan
-sqlmap
-EyeWitness #Screenshots of all web applications that running
-seclists
-Empire (BC Security fork)
-Metasploit
-PEASS (Privilege Escalation Awesome Scripts Suite)
-Ngork
-CrackMapExec (SMB, lsdap, mssql, ssh)
-Hashcat
-WhatWeb (fingerprinting tool)
+nmap # masscan
+# rumble (net scanner) #https://www.rumble.run
+# GoBuster #dir/file brute force
+# BurpSuite
+# ffuf
+# wpscan #Wordpress scan
+# sqlmap
+# EyeWitness #Screenshots of all web applications that running
+# seclists
+# Empire (BC Security fork)
+# Metasploit
+# PEASS (Privilege Escalation Awesome Scripts Suite)
+# Ngork
+# CrackMapExec (SMB, lsdap, mssql, ssh)
+# Hashcat
+# WhatWeb (fingerprinting tool)

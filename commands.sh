@@ -6,7 +6,7 @@ netstat -a # display all connections
 netstat -at # TCP & UDP connections only
 netstat -i # network interfaces
 netstat -rn # kernet routing info
-netstat -tnl # listening connections only
+netstat -tnl # listening TCP connections only
 
 ###  web details  ###
 dig medium.com
@@ -21,6 +21,14 @@ tcpdump src port
 tcpdump dst port
 tcpdump any port
 tcpdump -w #output to a file
+
+tcpdump -i en7 # captures traffic on en7 (current mac port)
+
+tcpdump -i en7 -c 10 host 8.8.8.8
+tcpdump -i en7 -c 10 src host 8.8.8.8
+tcpdump -i en7 -c 10 dst host 8.8.8.8
+
+tcpdump -i en7 net 10.1.0.0/24
 
 ###  scp ###
 # Copy file from a remote host to local host 
@@ -52,11 +60,19 @@ ssh-add -l
 # Use this to test the connection to github - it tells you the account that is being used
 ssh -T git@github.com
 
+# nslookup
+nslookup google.com 
+nslookup -type=ns google.com
+nslookup -query=mx google.com
+nslookup -query=any google.com
+nslookup google.com ns1.nsexample.com
+
 # These need to be installed
 tldr
 nmap
 lazygit
 jq 
+mtr
 how2 #stack overflow CLI
 # https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc
 

@@ -53,6 +53,9 @@ Chrome://restart
 # Check open ports on host
 nmap -sV 10.1.175.3
 
+# return just IP addresses for machines that are up 
+nmap -sn 192.168.1.0/24 -oG - | awk '/Up$/{print $2}'
+
 ###  SSH  ###
 # Use this is SSH isn't seeing a key that is installed
 ssh-add -l 

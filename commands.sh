@@ -3,10 +3,12 @@
 ###  netstat  ###
 netstat -s # interface statistics
 netstat -a # display all connections
-netstat -at # TCP & UDP connections only
+netstat -at # TCP connections only || -aut & UDP
 netstat -i # network interfaces
 netstat -rn # kernet routing info
 netstat -tnl # listening TCP connections only
+
+# https://www.tecmint.com/20-netstat-commands-for-linux-network-management/
 
 ###  web details  ###
 dig medium.com

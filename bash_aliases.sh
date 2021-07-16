@@ -110,3 +110,7 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
  
 ## get GPU ram on desktop / laptop##
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+
+## kubernetes
+alias kctx='kubectx'
+alias k='kubectl'

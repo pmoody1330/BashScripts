@@ -65,6 +65,11 @@ ssh-add -l
 # Use this to test the connection to github - it tells you the account that is being used
 ssh -T git@github.com
 
+# Change a password
+ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
+# get prompeted
+ssh-keygen -p
+
 # nslookup
 nslookup google.com 
 nslookup -type=ns google.com

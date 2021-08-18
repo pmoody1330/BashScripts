@@ -77,11 +77,68 @@ nslookup -query=mx google.com
 nslookup -query=any google.com
 nslookup google.com ns1.nsexample.com
 
+# lsof
+sudo lsof 
+# search by command
+sudo lsof -c firefox
+# search by PID
+sudo lsof -p 2121
+# search by user
+sudo lsof -u pmoody
+# search by file
+sudo lsof /bin/sleep
+
+#----------------------------------------------#
+
+# Add to .bash_profile
+# ignore common commands
+export HISTIGNORE=':pwd:id:uptime:resize:ls:clear:history:'
+# ignore duplicate entries
+export HISTCONTROL=ignoredups
+# control the size of the history file
+export HISTSIZE=2000
+export HISTFILESIZE=2000
+# ignore duplicate entries and don't overwrite the history
+export HISTCONTROL=ignoredups
+shopt -s histappend
+# Kube-ps1
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+source /usr/local/etc/bash_completion.d/kubectl
+complete -F __start_kubectl k
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r '/usr/local/etc/profile.d/bash_completion.sh' ]] && . '/usr/local/etc/profile.d/bash_completion.sh'
+
+
+#AWSume alias to source the AWSume script
+alias awsume="source \$(pyenv which awsume)"
+
+#Auto-Complete function for AWSume
+_awsume() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(awsume-autocomplete)
+    COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
+    return 0
+}
+complete -F _awsume awsume
+
+# Editor
+export EDITOR='vim'
+
 # These need to be installed
 tldr
+ripgrep
 nmap
+jq
 lazygit
-jq 
+yq 
 mtr
 how2 #stack overflow CLI
 # https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc

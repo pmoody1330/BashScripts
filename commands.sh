@@ -88,6 +88,9 @@ sudo lsof -u pmoody
 # search by file
 sudo lsof /bin/sleep
 
+# journalctrl
+journalctrl -f
+
 #----------------------------------------------#
 
 # Add to .bash_profile

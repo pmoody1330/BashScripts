@@ -67,6 +67,7 @@ ssh -T git@github.com
 
 # Change a password
 ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
+
 # get prompeted
 ssh-keygen -p
 
@@ -134,6 +135,10 @@ complete -F _awsume awsume
 
 # Editor
 export EDITOR='vim'
+
+# History
+# add a date time stamp to the current window output
+HISTTIMEFORMAT="%F %T "
 
 # These need to be installed
 tldr

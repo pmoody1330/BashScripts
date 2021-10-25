@@ -140,14 +140,18 @@ export EDITOR='vim'
 # add a date time stamp to the current window output
 HISTTIMEFORMAT="%F %T "
 
+# Sef File ACL 
+setfacl
+
 # These need to be installed
 tldr
 ripgrep
 nmap
 jq
-lazygit
+sslscan
 yq 
 mtr
+lazygit
 how2 #stack overflow CLI
 # https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc
 

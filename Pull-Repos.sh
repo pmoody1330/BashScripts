@@ -1,10 +1,10 @@
 #!/bin/bash
-magenta=`tput setaf 5`
-orange=`tput setaf 3`
-reset=`tput sgr0`
+magenta=$(tput setaf 5)
+orange=$(tput setaf 3)
+reset=$(tput sgr0)
 
 # Kill any open ssh sessions so the correct key will be used
-PID=$(pgrep -f ssh); kill $PID
+PID=$(pgrep -f ssh); kill "$PID"
 PID=''
 
 # Check that the script is being run with root access

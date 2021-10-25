@@ -13,18 +13,8 @@ PID=''
 #  exit 1
 #}
 
-
 # Powershell_Private my private repo
 #cd /home/pmoody/repositories/powershell_private
-#p=$(pwd)
-#echo "${magenta}$p"
-#remote=$(git remote -v)
-#echo "${orange}$remote ${reset}"
-#git status
-#git pull
-
-# Legacy Scripts
-#cd /home/pmoody/repositories/ramp_sql-scripts
 #p=$(pwd)
 #echo "${magenta}$p"
 #remote=$(git remote -v)
@@ -41,24 +31,7 @@ PID=''
 #git status
 #git pull
 
-# Peoduction Tessitura Scripts
-#cd /home/pmoody/repositories/tnhs-gocd-scripts
-#p=$(pwd)
-#echo "${magenta}$p"
-#remote=$(git remote -v)
-#echo "${orange}$remote ${reset}"
-#git status
-#git pull
-
-cd /home/pmoody/repositories/Playbooks
-p=$(pwd)
-echo "${magenta}$p"
-remote=$(git remote -v)
-echo "${orange}$remote ${reset}"
-git status
-git pull 
-
-cd /home/pmoody/Documents/PSLastPass
+cd /home/pmoody/repositories/Playbooks || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -66,24 +39,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/repositories/BashScripts
-p=$(pwd)
-echo "${magenta}$p"
-remote=$(git remote -v)
-echo "${orange}$remote ${reset}"
-git status
-git pull 
-
-# This is the self service APU
-#cd /home/pmoody/repositories/hostingserviceapi
-#p=$(pwd)
-#echo "${magenta}$p"
-#remote=$(git remote -v)
-#echo "${orange}$remote ${reset}"
-#git status
-#git pull
-
-cd /home/pmoody/repositories/Python
+cd /home/pmoody/Documents/PSLastPass || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -91,7 +47,23 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/repositories/Terraform
+cd /home/pmoody/repositories/BashScripts || exit
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull
+
+cd /home/pmoody/repositories/Python || exit
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull
+
+cd /home/pmoody/repositories/Terraform || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -100,10 +72,10 @@ git status
 git pull
 
 # Kill any open ssh sessions so the correct key will be used
-PID=$(pgrep -f ssh); kill $PID
+PID=$(pgrep -f ssh); kill "$PID"
 PID=''
 
-cd /home/pmoody/repositories/pmoodyDT/ansible
+cd /home/pmoody/repositories/pmoodyDT/ansible || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -111,7 +83,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull --all
 
-cd /home/pmoody/repositories/pmoodyDT/terraform
+cd /home/pmoody/repositories/pmoodyDT/terraform || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -119,7 +91,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull --all
 
-cd /home/pmoody/repositories/pmoodyDT/Bash_DT
+cd /home/pmoody/repositories/pmoodyDT/Bash_DT || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -127,7 +99,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/repositories/pmoodyDT/PythonDT
+cd /home/pmoody/repositories/pmoodyDT/PythonDT || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
@@ -135,34 +107,34 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/repositories/pmoodyDT/Notes
+cd /home/pmoody/repositories/pmoodyDT/Notes || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
 echo "${orange}$remote ${reset}"
 git status
-git pull 
+git pull
 
-cd /home/pmoody/repositories/pmoodyDT/LogicMonitor
+cd /home/pmoody/repositories/pmoodyDT/LogicMonitor || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
 echo "${orange}$remote ${reset}"
 git status
-git pull 
+git pull
 
-cd /home/pmoody/repositories/pmoodyDT/SQL 
+cd /home/pmoody/repositories/pmoodyDT/SQL || exit
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)
 echo "${orange}$remote ${reset}"
 git status
-git pull 
+git pull
 
-cd /home/pmoody/repositories/BashScripts
+cd /home/pmoody/repositories/BashScripts || exit
 
 # Kill any open ssh sessions so the correct key will be used
-PID=$(pgrep -f ssh); kill $PID
+PID=$(pgrep -f ssh); kill "$PID"
 PID=''
 
 bash /home/pmoody/repositories/BashScripts/PressAnyKey.sh

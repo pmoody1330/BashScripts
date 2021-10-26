@@ -92,6 +92,10 @@ sudo lsof /bin/sleep
 # journalctrl
 journalctrl -f
 
+# vim
+# write with sudo
+:W !sudo tee %
+
 #----------------------------------------------#
 
 # Add to .bash_profile
@@ -105,6 +109,8 @@ export HISTFILESIZE=2000
 # ignore duplicate entries and don't overwrite the history
 export HISTCONTROL=ignoredups
 shopt -s histappend
+# Auto CD
+shopt -s autocd
 # Kube-ps1
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1

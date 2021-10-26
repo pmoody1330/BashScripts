@@ -33,13 +33,13 @@ tcpdump -i en7 -c 10 dst host 8.8.8.8
 tcpdump -i en7 net 10.1.0.0/24
 
 ###  scp ###
-# Copy file from a remote host to local host 
+# Copy file from a remote host to local host
 scp pmoody@from_host:file.txt /local/directory/
 
-# Copy file from local host to a remote host 
+# Copy file from local host to a remote host
 scp file.txt pmoody@to_host:/remote/directory/
 
-# Copy directory from a remote host to local host 
+# Copy directory from a remote host to local host
 scp -r pmoody@from_host:/remote/directory/  /local/directory/
 
 # Copy directory from local host to a remote host
@@ -48,19 +48,19 @@ scp -r /local/directory/ pmoody@to_host:/remote/directory/
 # Copy file from remote host to remote host
 scp pmoody@from_host:/remote/directory/file.txt pmoody@to_host:/remote/directory/
 
-###  Chrome  ### 
+###  Chrome  ###
 Chrome://restart
 
 ###  NMAP ####
 # Check open ports on host
 nmap -sV 10.1.175.3
 
-# return just IP addresses for machines that are up 
+# return just IP addresses for machines that are up
 nmap -sn 192.168.1.0/24 -oG - | awk '/Up$/{print $2}'
 
 ###  SSH  ###
 # Use this is SSH isn't seeing a key that is installed
-ssh-add -l 
+ssh-add -l
 
 # Use this to test the connection to github - it tells you the account that is being used
 ssh -T git@github.com
@@ -72,14 +72,14 @@ ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
 ssh-keygen -p
 
 # nslookup
-nslookup google.com 
+nslookup google.com
 nslookup -type=ns google.com
 nslookup -query=mx google.com
 nslookup -query=any google.com
 nslookup google.com ns1.nsexample.com
 
 # lsof
-sudo lsof 
+sudo lsof
 # search by command
 sudo lsof -c firefox
 # search by PID
@@ -118,7 +118,7 @@ PS1='$(kube_ps1)'$PS1
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-source /usr/local/etc/bash_completion.d/kubectl
+source "/usr/local/etc/bash_completion.d/kubectl"
 complete -F __start_kubectl k
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r '/usr/local/etc/profile.d/bash_completion.sh' ]] && . '/usr/local/etc/profile.d/bash_completion.sh'
@@ -146,7 +146,7 @@ export EDITOR='vim'
 # add a date time stamp to the current window output
 HISTTIMEFORMAT="%F %T "
 
-# Sef File ACL 
+# Sef File ACL
 setfacl
 
 # These need to be installed
@@ -155,7 +155,7 @@ ripgrep
 nmap
 jq
 sslscan
-yq 
+yq
 mtr
 lazygit
 how2 #stack overflow CLI

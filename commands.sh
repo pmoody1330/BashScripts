@@ -96,6 +96,13 @@ journalctrl -f
 # write with sudo
 :W !sudo tee %
 
+# Sort by size
+ls -lah --sort=size
+
+# tmux
+https://superuser.com/questions/1560523/how-do-i-resize-tmux-pane-by-holding-down-prefix-and-arrow-key-for-a-while
+ctrl-b :resize-pane -R 10
+#ctrl-b alt+->, <-, ↑, ↓ (left right up down and multiple presses) [Command (⌘) + Control (^) + space bar allows special characters on a mac. ]
 #----------------------------------------------#
 
 # Add to .bash_profile

@@ -143,6 +143,14 @@ echo "${orange}$remote ${reset}"
 git status
 git pull 
 
+cd /home/pmoody/repositories/pmoodyDT/jenkins
+p=$(pwd)
+echo "${magenta}$p"
+remote=$(git remote -v)
+echo "${orange}$remote ${reset}"
+git status
+git pull
+
 cd /home/pmoody/repositories/pmoodyDT/LogicMonitor
 p=$(pwd)
 echo "${magenta}$p"

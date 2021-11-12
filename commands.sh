@@ -117,6 +117,14 @@ https://superuser.com/questions/1560523/how-do-i-resize-tmux-pane-by-holding-dow
 ctrl-b :resize-pane -R 10
 #ctrl-b alt+->, <-, ↑, ↓ (left right up down and multiple presses) [Command (⌘) + Control (^) + space bar allows special characters on a mac. ]
 
+tmux list-sessions
+
+# start a new session detach and attach
+tmux new -s <my_session>
+# Run the desired program.
+# Use the key sequence Ctrl-b + d to detach from the session.
+tmux attach-session -t <my_session>
+
 #File Management
 # creates top level folder and all its children
 mkdir -p ./some/newly/created/path/
@@ -150,7 +158,7 @@ shopt -s histappend
 shopt -s autocd
 
 # Kube-ps1
-# shellcheck source="/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+# shellcheck source=/usr/local/opt/kube-ps1/share/kube-ps1.sh
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 

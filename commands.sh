@@ -103,6 +103,19 @@ ls -lah --sort=size
 https://superuser.com/questions/1560523/how-do-i-resize-tmux-pane-by-holding-down-prefix-and-arrow-key-for-a-while
 ctrl-b :resize-pane -R 10
 #ctrl-b alt+->, <-, ↑, ↓ (left right up down and multiple presses) [Command (⌘) + Control (^) + space bar allows special characters on a mac. ]
+
+#File Management
+# creates top level folder and all its children
+mkdir -p ./some/newly/created/path/
+# moves files to whatever you just created
+mv ./old/path/* "$_"
+
+# or more succinctly
+mkdir -p ./some/newly/created/path/; mv ./old/path/* "$_"
+
+# Move to the dir that you just created
+cd "$_"
+
 #----------------------------------------------#
 
 # Add to .bash_profile
@@ -164,6 +177,8 @@ jq
 sslscan
 yq
 mtr
+stern # tail logs from all pods in k8s
+awsume # change profile for AWS
 lazygit
 how2 #stack overflow CLI
 # https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc

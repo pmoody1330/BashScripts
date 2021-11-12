@@ -32,11 +32,6 @@ tcpdump -i en7 -c 10 dst host 8.8.8.8
 
 tcpdump -i en7 net 10.1.0.0/24
 
-# Create directories recursively (useful for creating nested dirs):
-mkdir -p {{path/to/directory}}
-# & cd to dir
-mkdir -p {{path/to/directory}} && cd $_
-
 ###  scp ###
 # Copy file from a remote host to local host
 scp pmoody@from_host:file.txt /local/directory/
@@ -115,7 +110,7 @@ open # <Folder Name> - MacOS
 
 # docker
 # start all containers
-docker start $(docker ps -aq)
+docker start "$(docker ps -aq)"
 
 # tmux
 https://superuser.com/questions/1560523/how-do-i-resize-tmux-pane-by-holding-down-prefix-and-arrow-key-for-a-while
@@ -131,8 +126,12 @@ mv ./old/path/* "$_"
 # or more succinctly
 mkdir -p ./some/newly/created/path/; mv ./old/path/* "$_"
 
+
+# & cd to dir
+mkdir -p ./some/newly/created/path/ && cd "$_" || exit
+
 # Move to the dir that you just created
-cd "$_"
+cd "$_" || exit
 
 #----------------------------------------------#
 
@@ -149,18 +148,21 @@ export HISTCONTROL=ignoredups
 shopt -s histappend
 # Auto CD
 shopt -s autocd
+
 # Kube-ps1
+# shellcheck source="/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
+# shellcheck source=/usr/local/etc/profile.d/bash_completion.sh
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
+# shellcheck source=/usr/local/etc/bash_completion.d/kubectl
 source "/usr/local/etc/bash_completion.d/kubectl"
 complete -F __start_kubectl k
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r '/usr/local/etc/profile.d/bash_completion.sh' ]] && . '/usr/local/etc/profile.d/bash_completion.sh'
-
 
 #AWSume alias to source the AWSume script
 alias awsume="source \$(pyenv which awsume)"

@@ -32,6 +32,11 @@ tcpdump -i en7 -c 10 dst host 8.8.8.8
 
 tcpdump -i en7 net 10.1.0.0/24
 
+# Create directories recursively (useful for creating nested dirs):
+mkdir -p {{path/to/directory}}
+# & cd to dir
+mkdir -p {{path/to/directory}} && cd $_
+
 ###  scp ###
 # Copy file from a remote host to local host
 scp pmoody@from_host:file.txt /local/directory/
@@ -71,7 +76,12 @@ ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
 # get prompeted
 ssh-keygen -p
 
-# nslookup
+# command use to copy key to another server
+ssh-copy-id production1@serverb
+
+# https://faun.pub/linux-commands-c049578b4d49
+
+### nslookup ###
 nslookup google.com
 nslookup -type=ns google.com
 nslookup -query=mx google.com
@@ -98,6 +108,14 @@ journalctrl -f
 
 # Sort by size
 ls -lah --sort=size
+
+# open file explorer
+xdg-open # <Folder name> - Linux
+open # <Folder Name> - MacOS
+
+# docker
+# start all containers
+docker start $(docker ps -aq)
 
 # tmux
 https://superuser.com/questions/1560523/how-do-i-resize-tmux-pane-by-holding-down-prefix-and-arrow-key-for-a-while

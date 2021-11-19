@@ -39,7 +39,7 @@ scp pmoody@from_host:file.txt /local/directory/
 # Copy file from local host to a remote host
 scp file.txt pmoody@to_host:/remote/directory/
 
-# Copy directory from a remote host to local host
+# Copy directory from a remote host to local host -- -r is recursive 
 scp -r pmoody@from_host:/remote/directory/  /local/directory/
 
 # Copy directory from local host to a remote host
@@ -47,6 +47,11 @@ scp -r /local/directory/ pmoody@to_host:/remote/directory/
 
 # Copy file from remote host to remote host
 scp pmoody@from_host:/remote/directory/file.txt pmoody@to_host:/remote/directory/
+
+### wget ###
+wget -b # background
+wget -c # continue partially downloaded file
+wget --tries <number> #tries a number of times
 
 ###  Chrome  ###
 Chrome://restart
@@ -83,7 +88,12 @@ nslookup -query=mx google.com
 nslookup -query=any google.com
 nslookup google.com ns1.nsexample.com
 
-# lsof
+### netstat ###
+netstat -p # display the program name
+netstat -s # display port details
+netstat -r # display routing table
+
+# lsof - list open files
 sudo lsof
 # search by command
 sudo lsof -c firefox

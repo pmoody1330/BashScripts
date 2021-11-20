@@ -7,6 +7,9 @@ netstat -at # TCP connections only || -aut & UDP
 netstat -i # network interfaces
 netstat -rn # kernet routing info
 netstat -tnl # listening TCP connections only
+netstat -p # display the program name
+netstat -s # display port details
+netstat -r # display routing table
 
 # https://www.tecmint.com/20-netstat-commands-for-linux-network-management/
 
@@ -88,11 +91,6 @@ nslookup -query=mx google.com
 nslookup -query=any google.com
 nslookup google.com ns1.nsexample.com
 
-### netstat ###
-netstat -p # display the program name
-netstat -s # display port details
-netstat -r # display routing table
-
 # lsof - list open files
 sudo lsof
 # search by command
@@ -134,6 +132,10 @@ tmux new -s <my_session>
 # Run the desired program.
 # Use the key sequence Ctrl-b + d to detach from the session.
 tmux attach-session -t <my_session>
+
+# split window
+'ctrl+b "' # horizontal
+'ctrl+b %' # vertical
 
 #File Management
 # creates top level folder and all its children

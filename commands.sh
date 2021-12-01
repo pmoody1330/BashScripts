@@ -42,7 +42,7 @@ scp pmoody@from_host:file.txt /local/directory/
 # Copy file from local host to a remote host
 scp file.txt pmoody@to_host:/remote/directory/
 
-# Copy directory from a remote host to local host -- -r is recursive 
+# Copy directory from a remote host to local host -- -r is recursive
 scp -r pmoody@from_host:/remote/directory/  /local/directory/
 
 # Copy directory from local host to a remote host
@@ -219,9 +219,14 @@ yq
 mtr
 stern # tail logs from all pods in k8s
 awsume # change profile for AWS
+
+# https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc
+
+# Other applications that may be helpful
+ddgr # duck duck go CLI
+googler # google CLI
 lazygit
 how2 #stack overflow CLI
-# https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc
 
 #SecTools
 nmap # masscan

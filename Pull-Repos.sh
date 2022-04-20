@@ -115,7 +115,6 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-<<<<<<< HEAD
 cd /home/pmoody/repositories/pmoodyDT/jenkins
 p=$(pwd)
 echo "${magenta}$p"
@@ -124,10 +123,7 @@ echo "${orange}$remote ${reset}"
 git status
 git pull
 
-cd /home/pmoody/repositories/pmoodyDT/LogicMonitor
-=======
 cd /home/pmoody/repositories/pmoodyDT/LogicMonitor || exit
->>>>>>> 10a47e61d050aed9b17a173addba79ec6150996b
 p=$(pwd)
 echo "${magenta}$p"
 remote=$(git remote -v)

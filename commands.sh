@@ -13,6 +13,10 @@ netstat -r # display routing table
 
 ss -tlupn
 
+# netcat
+#Check if ssh is open
+nc -zvw10 192.168.0.1 22
+
 # https://www.tecmint.com/20-netstat-commands-for-linux-network-management/
 
 ###  web details  ###
@@ -259,3 +263,7 @@ nmap # masscan
 # CrackMapExec (SMB, lsdap, mssql, ssh)
 # Hashcat
 # WhatWeb (fingerprinting tool)
+
+# Ansible
+ansible-playbook --key-file ~/.ssh/ansible apt_updates.yml -K
+ansible-playbook --key-file ~/.ssh/ansible apt_updates.yml -K --limit-host Icinga.local

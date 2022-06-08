@@ -221,6 +221,7 @@ stern # tail logs from all pods in k8s
 awsume # change profile for AWS
 lazygit
 how2 #stack overflow CLI
+icdiff 
 # https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc
 
 #SecTools

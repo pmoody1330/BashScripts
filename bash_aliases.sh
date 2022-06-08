@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# My Aliases
+# My Aliases - remove with unalias
 # BASH
 alias ll='ls -alF'
 
-# GIT
+# GIT ~/.gitconfig
+git config --global alias.lol 'log --graph --decorate --pretty=oneline --abbrev-commit --all'
+
 alias.lol=log --graph --decorate --pretty=oneline --abbrev-commit --all
 alias.log5=log --pretty=format:"%h%x09%Cgreen%ae%Creset%x09%Cblue%an%x09%Creset%Cgreen%ad%x09%Creset%s%n" --date=short --name-status -n 5
 
@@ -76,7 +78,7 @@ alias ni='npm install'
 alias nis='npm install --save'
 ## get rid of command not found ##
 alias cd..='cd ..'
- 
+
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
 alias ...='cd ../../../'
@@ -91,23 +93,23 @@ alias curdate='date +"%d-%m-%Y"'
 alias firefox='/opt/firefox13/firefox'
 alias chrome='/opt/google/chrome/chrome'
 alias opera='/opt/opera/opera'
- 
+
 #default ff
 alias ff=firefox
- 
+
 #default browser
 alias browser=chrome
 ## pass options to free ##
 alias meminfo='free -m -l -t'
- 
+
 ## get top process eating memory
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
- 
+
 ## get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
- 
+
 ## get GPU ram on desktop / laptop##
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 

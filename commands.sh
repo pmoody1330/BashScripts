@@ -11,6 +11,12 @@ netstat -p # display the program name
 netstat -s # display port details
 netstat -r # display routing table
 
+ss -tlupn
+
+# netcat
+#Check if ssh is open
+nc -zvw10 192.168.0.1 22
+
 # https://www.tecmint.com/20-netstat-commands-for-linux-network-management/
 
 ###  web details  ###
@@ -42,7 +48,7 @@ scp pmoody@from_host:file.txt /local/directory/
 # Copy file from local host to a remote host
 scp file.txt pmoody@to_host:/remote/directory/
 
-# Copy directory from a remote host to local host -- -r is recursive 
+# Copy directory from a remote host to local host -- -r is recursive
 scp -r pmoody@from_host:/remote/directory/  /local/directory/
 
 # Copy directory from local host to a remote host
@@ -54,21 +60,32 @@ scp pmoody@from_host:/remote/directory/file.txt pmoody@to_host:/remote/directory
 ### wget ###
 wget -b # background
 wget -c # continue partially downloaded file
-wget --tries <number> #tries a number of times
+wget --tries <number> # tries a number of times
 
 ###  Chrome  ###
 Chrome://restart
 
 ###  NMAP ####
+# https://securitytrails.com/blog/nmap-cheat-sheet
 # Check open ports on host
 nmap -sV 10.1.175.3
 
 # return just IP addresses for machines that are up
 nmap -sn 192.168.1.0/24 -oG - | awk '/Up$/{print $2}'
 
+# Vulnerability scans
+# if vulscan is configured - https://securitytrails.com/blog/nmap-vulnerability-scan
+nmap -sV --script=vulscan/vulscan.nse www.example.com
+
+# This is nice since it is already installed
+nmap -sV --script vulners 192.168.1.1
+
 ###  SSH  ###
 # Use this is SSH isn't seeing a key that is installed
 ssh-add -l
+
+# Start an ssh-agent for the current shell
+eval $(ssh-agent)
 
 # Use this to test the connection to github - it tells you the account that is being used
 ssh -T git@github.com
@@ -211,7 +228,7 @@ setfacl
 
 # These need to be installed
 tldr
-ripgrep
+ripgrep (rg)
 nmap
 jq
 sslscan
@@ -219,6 +236,13 @@ yq
 mtr
 stern # tail logs from all pods in k8s
 awsume # change profile for AWS
+shellcheck # bash linter
+
+# https://medium.zenika.com/15-command-line-tools-which-spark-joy-in-your-terminal-ec420d770bcc
+
+# Other applications that may be helpful
+ddgr # duck duck go CLI
+googler # google CLI
 lazygit
 how2 #stack overflow CLI
 icdiff 
@@ -241,3 +265,7 @@ nmap # masscan
 # CrackMapExec (SMB, lsdap, mssql, ssh)
 # Hashcat
 # WhatWeb (fingerprinting tool)
+
+# Ansible
+ansible-playbook --key-file ~/.ssh/ansible apt_updates.yml -K
+ansible-playbook --key-file ~/.ssh/ansible apt_updates.yml -K --limit-host Icinga.local

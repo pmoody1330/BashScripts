@@ -129,6 +129,10 @@ journalctrl -f
 # Sort by size
 ls -lah --sort=size
 
+# Disk space
+# LG
+df -h | grep /dev/sda2
+
 # open file explorer
 xdg-open # <Folder name> - Linux
 open # <Folder Name> - MacOS

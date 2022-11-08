@@ -32,6 +32,11 @@ apt update
 #install docker and related components
 apt install -y docker-ce docker-ce-cli containerd.io
 
+# add docker group to eliminate the need for sudo
+groupadd docker
+usermod -aG docker $USER
+newgrp docker
+
 #validate install
 docker version
 
